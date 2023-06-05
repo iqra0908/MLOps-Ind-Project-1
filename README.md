@@ -2,36 +2,29 @@
 
 This script uses the SpeechT5 model from the Hugging Face Transformers library to convert text into speech. It utilizes the Microsoft SpeechT5 model for text-to-speech synthesis and the SpeechT5HifiGan model for vocoding.
 
-## Installation:
+## Installation
 
-1. Clone the repository:
-   git clone <repository_url>
+1. Clone the repository: `git clone <repository_url>`
+2. Create a new Conda environment: `conda create -n text-to-speech python=3.9`
+3. Activate the Conda environment: `conda activate text-to-speech`
+4. Install the required dependencies using the Makefile: `make install`
+5. Alternatively, you can manually install the dependencies using the following command: `pip install -r requirements.txt`
 
-2. Create and activate a virtual environment (optional but recommended):
-   python -m venv env
-   source env/bin/activate
+## Usage
 
-3. Install the required dependencies:
-   pip install transformers datasets torch soundfile
-
-4. Run the script:
-   python text-to-speech.py
-
-## Usage:
-
-1. Customize the text you want to convert to speech:
-   text = "hello! how are you?"
-
-2. Run the script:
-   python text-to-speech.py
-
+1. Customize the text you want to convert to speech. Open text-to-speech.py in a text editor and modify the text variable with your desired input text.
+2. Run the script using the Makefile: `make run`
+Alternatively, you can run the script directly using the following command: `python text-to-speech.py`
 3. The script will generate an audio file named "speech.wav" containing the synthesized speech.
 
-## Configuration:
-
+## Configuration
 You can modify the script to change the input text or customize other settings. Additionally, you can explore different models available in the Hugging Face model hub for text-to-speech conversion.
 
 Please note that a stable internet connection is required to download the pre-trained models.
+
+If you encounter any issues or errors, make sure to check the troubleshooting section or reach out for support.
+
+Enjoy converting text to speech!
 
 ## Project Requirements:
 
