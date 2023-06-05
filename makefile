@@ -19,3 +19,8 @@ install:
 
 clean:
 	rm -f speech.wav
+
+lint:
+    $(PIP) install --upgrade $(PIP)
+    $(PIP) install -r $(REQUIREMENTS)
+    pylint $(git ls-files '*.py')
