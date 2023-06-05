@@ -1,4 +1,4 @@
-.PHONY: all clean install
+.PHONY: all clean install lint
 
 PYTHON = python
 PIP = pip
@@ -10,6 +10,7 @@ all:
 	@echo "  run      - Run the text-to-speech conversion"
 	@echo "  install  - Install the required packages"
 	@echo "  clean    - Clean up generated files"
+	@echo "  lint     - Perform linting using Pylint"
 
 run:
 	$(PYTHON) $(SCRIPT) "Enter the text for text-to-speech conversion"
@@ -21,6 +22,6 @@ clean:
 	rm -f speech.wav
 
 lint:
-    $(PIP) install --upgrade $(PIP)
-    $(PIP) install -r $(REQUIREMENTS)
-    pylint $(git ls-files '*.py')
+	$(PIP) install --upgrade $(PIP)
+	$(PIP) install -r $(REQUIREMENTS)
+	pylint $(git ls-files '*.py')
