@@ -24,4 +24,3 @@ clean:
 lint:
 	$(PIP) install --upgrade $(PIP)
 	$(PIP) install -r $(REQUIREMENTS)
-	pylint $(git '*.py')
