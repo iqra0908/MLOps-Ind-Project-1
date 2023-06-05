@@ -24,4 +24,4 @@ clean:
 lint:
 	$(PIP) install --upgrade $(PIP)
 	$(PIP) install -r $(REQUIREMENTS)
-	pylint $(git ls-files '*.py')
+	pylint $(git '*.py')
